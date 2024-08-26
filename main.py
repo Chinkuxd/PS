@@ -29,23 +29,23 @@ Y88b  d88P 888    888   888   888   Y8888 888   Y88b  Y88b. .d88P
 while 0 < 999:
     try:
         print()
-        if os.path.exists("token.txt"):
+        if os.path.exists("cookie.txt"):
             print("\033[1m\033[33m[\033[36m¥\033[33m]\033[32m One Token Found.")
-            with open("token.txt", "r") as f:
-                token = f.read()
+            with open("cookie.txt", "r") as f:
+                cookie = f.read()
                 opt=input("\033[33m\033[1m[\033[36m¥\033[33m] \033[32mDo you want To Use this token [y/n] : \033[36m")
                 print("\033[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━")
                 if opt == "Y" or opt == "y" :
-                    token=input("\033[31m[\033[32m+\033[31m] \033[1m\033[33m Your FB Token:👇\n\033[33m━━━━━━━━━━━━━━━━━━━━━━━\033[36m\n" + (token))
+                    cookies=input("\033[31m[\033[32m+\033[31m] \033[1m\033[33m Your FB Cookie:👇\n\033[33m━━━━━━━━━━━━━━━━━━━━━━━\033[36m\n" + (cookies))
                     print("\033[33m━━━━━━━━━━━━━━━━━━━━━━━")
                 elif opt == "N" or opt == "n":
-                    os.system("python token.py")
+                    os.system("python cookie.py")
                 else :
                     print("\033[32m[\033[31mx\033[32m] \033[31mWrong Input Try Again ")
                     time.sleep(2)
                     os.system("python main.py")
         else:
-            os.system("python token.py")
+            os.system("python cookie.py")
         try:
             response = requests.get('https://m.facebook.com/composer/ocelot/async_loader/?publisher=feed#_=_', headers = {
                 'Cookie': cookies,
